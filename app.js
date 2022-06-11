@@ -20,8 +20,12 @@ const mongoSanitize = require('express-mongo-sanitize');
 const uesrRoutes = require('./routes/users')
 const campgroundRoutes = require('./routes/campgrounds')
 const reviewRoutes = require('./routes/review')
+// const MongoDBStore = require('connect-mongo')(session);
+const MongoDBStore = require('connect-mongo');
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp', {
+// const dbUrl = process.env.DB_URL
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp'
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -44,9 +48,25 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(mongoSanitize({
     replaceWith: '_'
 }))
+const secret = process.env.SECRET || 'secretsession';
+
+const store = new MongoDBStore({
+    // url: dbUrl,
+    mongoUrl: dbUrl,
+    touchAfter: 24 * 60 * 60,
+    crypto: {
+    secret
+    }
+})
+
+store.on("error", function(e) {
+    console.log("SESSION STORE ERROR", e)
+})
+
 const sessionConfig = {
+    store,
     name: 'session',
-    secret: 'secretsession',
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
