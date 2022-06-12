@@ -14,11 +14,13 @@ This project was created using Node.js, Express, MongoDB, and Bootstrap. Passpor
 - A user may add and delete multiple images for a campground.
 ## API Reference
 
-### Javascript modules to speed up developement process.
+### Javascript modules and pre packaged libraries to speed up developement process.
 
 | API | Type     | Reference              |
 | :-------- | :------- | :------------------------- |
 | `Node.js NPM` | `Npm Modules` | https://www.npmjs.com/ |
+
+### MapBox API to pinpoint location of campgrounds on map
 
 | API | Type     | Reference              |
 | :-------- | :------- | :------------------------- |
