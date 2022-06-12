@@ -1,6 +1,6 @@
 # YelpCamp - By Howard Tep
 
-View Here: https://stark-garden-02476.herokuapp.com/campgrounds
+View Here: https://stark-garden-02476.herokuapp.com/
 
 YelpCamp is a website where users can create and review campgrounds.In order to review or create a campground, you must have an account. Inspiration of this project was taken from Colt Steel's Web Developer Course.
 
@@ -22,7 +22,7 @@ This project was created using Node.js, Express, MongoDB, and Bootstrap. Passpor
 
 | API | Type     | Reference              |
 | :-------- | :------- | :------------------------- |
-| `MapBox` | `Google Maps` | https://docs.mapbox.com/api/overview/ |\
+| `MapBox` | `Google Maps` | https://docs.mapbox.com/api/overview/ |
 
 ### Cloud CDN used for storing images of campgrounds.
 
