@@ -14,9 +14,7 @@ This project was created using Node.js, Express, MongoDB, and Bootstrap. Passpor
 - A user may add and delete multiple images for a campground.
 ## API Reference
 
-```http
-Javascript modules to speed up developement process.
-```
+### Javascript modules to speed up developement process.
 
 | API | Type     | Reference              |
 | :-------- | :------- | :------------------------- |
@@ -26,18 +24,14 @@ Javascript modules to speed up developement process.
 | :-------- | :------- | :------------------------- |
 | `MapBox` | `Google Maps` | https://docs.mapbox.com/api/overview/ |\
 
-```http
-Cloud CDN used for storing images of campgrounds.
-```
+### Cloud CDN used for storing images of campgrounds.
 
 | API | Type     | Reference                      |
 | :-------- | :------- | :-------------------------------- |
 | `Cloudinary`      | `CDN Storage` | https://docs.mapbox.com/api/overview/ |
 
 
-```http
-Database service to store all information YelpCamp.
-```
+### Database service to store all information YelpCamp.
 
 | API | Type     | Reference                      |
 | :-------- | :------- | :-------------------------------- |
